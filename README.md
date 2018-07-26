@@ -57,13 +57,13 @@ $ TF_VAR_ami_id=ami-abc765 terraform apply
 
 The variable can be set via a variable file which can be automatically loaded if it is called terraform.tfvars:
 ```
-echo "ami_id=ami-537497" > terraform.tfvars
+echo "ami_id=\"ami-537497\"" > terraform.tfvars
 terraform apply
 ```
 or manually loaded if it referenced as a command line switch
 ```
-echo "ami_id=ami-537497" > somevars.tfvars
-terraform apply -var-file=somefile.tfvars
+echo "ami_id=\"ami-537497\"" > somevars.tfvars
+terraform apply -var-file=somevars.tfvars
 ```
 
 
